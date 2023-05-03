@@ -31,6 +31,7 @@ M.base_30 = {
   lightbg = "#2d3139",
   pmenu_bg = "#61afef",
   folder_bg = "#61afef",
+  --git_orange = "#fbce8c",
 }
 
 M.base_16 = {

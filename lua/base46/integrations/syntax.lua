@@ -46,7 +46,7 @@ return {
   },
 
   Include = {
-    fg = theme.base0D,
+    fg = theme.base0E,
   },
 
   Keyword = {

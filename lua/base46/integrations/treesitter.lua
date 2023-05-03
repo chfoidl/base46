@@ -1,7 +1,12 @@
 local theme = require("base46").get_theme_tb "base_16"
+local theme30 = require("base46").get_theme_tb "base_30"
 
 return {
+  -- Core
   -- `@annotation` is not one of the default capture group, should we keep it
+  ["@comment"] = {
+    fg = theme30.light_grey,
+  },
   ["@annotation"] = {
     fg = theme.base0F,
   },
@@ -19,7 +24,7 @@ return {
   },
 
   ["@constant.builtin"] = {
-    fg = theme.base09,
+    fg = theme.base0A,
   },
 
   ["@constant.macro"] = {
@@ -71,7 +76,7 @@ return {
   },
 
   ["@namespace"] = {
-    fg = theme.base08,
+    fg = theme.base0A,
   },
 
   ["@none"] = {
@@ -87,15 +92,15 @@ return {
   },
 
   ["@punctuation.bracket"] = {
-    fg = theme.base0F,
+    fg = theme.base09,
   },
 
   ["@punctuation.delimiter"] = {
-    fg = theme.base0F,
+    fg = theme.base05,
   },
 
   ["@punctuation.special"] = {
-    fg = theme.base08,
+    fg = theme.base05,
   },
 
   ["@string.regex"] = {
@@ -115,11 +120,11 @@ return {
   },
 
   ["@tag.attribute"] = {
-    link = "@property",
+    fg = theme.base09,
   },
 
   ["@tag.delimiter"] = {
-    fg = theme.base0F,
+    fg = theme.base05,
   },
 
   ["@text"] = {
@@ -153,11 +158,11 @@ return {
   },
 
   ["@variable"] = {
-    fg = theme.base05,
+    fg = theme.base0A,
   },
 
   ["@variable.builtin"] = {
-    fg = theme.base09,
+    fg = theme.base0A,
   },
 
   -- variable.global
@@ -194,5 +199,41 @@ return {
 
   ["@conditional"] = {
     link = "Conditional",
+  },
+
+  -- Custom
+  ["@opening_tag"] = {
+    fg = theme.base08,
+  },
+  ["@use.fqdn"] = {
+    fg = theme.base05,
+  },
+  ["@use.name"] = {
+    fg = theme.base0A,
+  },
+  ["@type.qualifier"] = {
+    fg = theme.base0E,
+  },
+  ["@comment.tag"] = {
+    fg = theme.base0E,
+  },
+  ["@comment.type.fqdn"] = {
+    --fg = theme.base05,
+    link = "@comment"
+  },
+  ["@comment.type.name"] = {
+    fg = theme.base0A,
+  },
+  ["@repeat"] = {
+    fg = theme.base0E,
+  },
+  ["@import.identifier"] = {
+    fg = theme.base08,
+  },
+  ["@jsx.element.name"] = {
+    fg = theme.base08,
+  },
+  ["@jsx.element.name.component"] = {
+    fg = theme.base0A,
   },
 }

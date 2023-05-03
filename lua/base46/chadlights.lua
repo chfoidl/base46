@@ -1,5 +1,6 @@
 local merge_tb = require("base46").merge_tb
 
+
 local ui = require("core.utils").load_config().ui
 local highlights = {}
 

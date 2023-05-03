@@ -1,10 +1,24 @@
 local M = {}
 local g = vim.g
-local config = require("core.utils").load_config()
+--local config = require("core.utils").load_config()
+local config = {
+  ui = {
+    hl_add = {},
+    hl_override = {},
+    changed_themes = {},
+    theme_toggle = { "onedark", "one_light" },
+    theme = "onedark", -- default theme
+    transparency = false,
+  },
+}
 
 M.get_theme_tb = function(type)
-  local default_path = "base46.themes." .. g.nvchad_theme
-  local user_path = "custom.themes." .. g.nvchad_theme
+  local theme = require "base46.themes.onedark"
+  return theme[type]
+
+  --[[
+  local default_path = "base46.themes." .. "onedark"
+  local user_path = "custom.themes." .. "onedark"
 
   local present1, default_theme = pcall(require, default_path)
   local present2, user_theme = pcall(require, user_path)
@@ -16,6 +30,7 @@ M.get_theme_tb = function(type)
   else
     error "No such theme bruh >_< "
   end
+  --]]
 end
 
 M.merge_tb = function(table1, table2)
@@ -106,6 +121,9 @@ M.load_theme = function()
 end
 
 M.override_theme = function(default_theme, theme_name)
+  return default_theme
+
+  --[[
   local changed_themes = config.ui.changed_themes
 
   if changed_themes[theme_name] then
@@ -113,6 +131,7 @@ M.override_theme = function(default_theme, theme_name)
   else
     return default_theme
   end
+  --]]
 end
 
 M.toggle_theme = function()

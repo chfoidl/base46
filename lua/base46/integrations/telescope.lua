@@ -3,43 +3,50 @@ local colors = require("base46").get_theme_tb "base_30"
 return {
 
   TelescopeBorder = {
-    fg = colors.darker_black,
+    fg = colors.light_grey,
     bg = colors.darker_black,
   },
 
   TelescopePromptBorder = {
-    fg = colors.black2,
-    bg = colors.black2,
+    fg = colors.light_grey,
+    bg = colors.darker_black,
   },
 
   TelescopePromptNormal = {
     fg = colors.white,
-    bg = colors.black2,
+    bg = colors.darker_black,
   },
 
   TelescopePromptPrefix = {
     fg = colors.red,
-    bg = colors.black2,
+    bg = colors.darker_black,
   },
 
   TelescopeNormal = { bg = colors.darker_black },
 
   TelescopePreviewTitle = {
-    fg = colors.black,
-    bg = colors.green,
+    fg = colors.white,
+    bg = colors.darker_black,
+    bold = true,
   },
 
   TelescopePromptTitle = {
-    fg = colors.black,
-    bg = colors.red,
+    fg = colors.white,
+    bg = colors.darker_black,
+    bold = true,
   },
 
   TelescopeResultsTitle = {
-    fg = colors.darker_black,
+    fg = colors.white,
     bg = colors.darker_black,
+    bold = true,
   },
 
   TelescopeSelection = { bg = colors.black2, fg = colors.white },
+
+  TelescopeMatching = {
+    fg = colors.sun,
+  },
 
   TelescopeResultsDiffAdd = {
     fg = colors.green,

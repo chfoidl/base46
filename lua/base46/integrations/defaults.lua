@@ -7,6 +7,9 @@ return {
     fg = colors.white,
   },
 
+  -- those ugly ~'s
+  EndOfBuffer = { fg = theme.base00 },
+
   Pmenu = { bg = colors.one_bg },
   PmenuSbar = { bg = colors.one_bg },
   PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
@@ -20,7 +23,7 @@ return {
   LineNr = { fg = colors.grey },
 
   -- floating windows
-  FloatBorder = { fg = colors.blue },
+  FloatBorder = { fg = colors.light_grey, bg = colors.darker_black },
   NormalFloat = { bg = colors.darker_black },
 
   NvimInternalError = { fg = colors.red },
@@ -38,7 +41,8 @@ return {
 
   Normal = {
     fg = theme.base05,
-    bg = theme.base00,
+    -- bg = theme.base00,
+    bg = None
   },
 
   Bold = {
